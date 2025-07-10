@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.contact-section {
+  background-color: #121618;
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  padding: 60px 20px 30px;
+  text-align: center;
+}
+
+.contact-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.contact-box {
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  width: 300px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #0796EF;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #bbb;
+  font-size: 14px;
+  text-align: left;
+}
+
+.icon {
+  color: #857878;
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+/* .logo-box {
+  border: none;
+} */
+
+.footer-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-brand {
+  font-size: 26px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.deep {
+  color: #0796EF;
+}
+
+.net {
+  color: #fff;
+}
+
+.soft {
+  color: #857878;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  color: #808080;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #0796EF;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #999;
+}
+
+.footer-links a {
+  color: #999;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #0796EF;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  .contact-box {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .logo-box{
+    order: -1;
+  }
+  .footer-brand {
+    flex-direction: column;
+    font-size: 22px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .footer-brand {
+    flex-direction: row !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .footer-brand .deep,
+  .footer-brand .net,
+  .footer-brand .soft {
+    display: inline !important;
+    margin: 0 3px !important;
+  }
+}

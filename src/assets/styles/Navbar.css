@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.navbar-container {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #121618;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 160px;
+  font-family: 'Oswald', sans-serif;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  width: 86px;
+  height: 76px;
+  position: absolute;
+  top: 60px;
+  left: 168px;
+  z-index: 1100;
+}
+
+.navbar-brand {
+  position: absolute;
+  top: 53px;
+  left: 270px;
+  height: 52px;
+  width: 100%;
+}
+
+.brand-deep {
+  font-size: 35px;
+  color: #0796EF;
+  letter-spacing: 0.03em;
+}
+
+.brand-net {
+  font-size: 35px;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+}
+
+.brand-soft {
+  font-size: 35px;
+  color: #857878;
+  letter-spacing: 0.03em;
+  display: flex;
+  margin-top: -10px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  right: 160px;
+  top: 62px;
+}
+
+.nav-link {
+  font-size: 16px;
+  color: #ffffff !important;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link.active {
+  color: #0796EF !important;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: absolute;
+  top: 11px;
+  left: 362px;
+  width: 19px;
+  height: 19px;
+  z-index: 1200;
+}
+
+.bar {
+  height: 2px;
+  background-color: #857878;
+  width: 100%;
+}
+
+/* Responsive for screen width <= 768px */
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background: #121618;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+  }
+
+  .navbar-logo {
+    top: 10px;
+    width: 50px;
+    height: 44px;
+    left: 240px;
+    z-index: 1100;
+  }
+
+  .navbar-brand {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #121618;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px 0 20px;
+    align-items: center;
+    display: none;
+    z-index: 999;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+}

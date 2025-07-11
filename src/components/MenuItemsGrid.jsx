@@ -1,3 +1,4 @@
+// MenuPage.jsx
 import React, { useEffect, useState } from "react";
 import "../assets/styles/MenuItemsGrid.css";
 import axios from "axios";
@@ -31,8 +32,13 @@ const MenuPage = () => {
   };
 
   const handleAddItem = async () => {
+    const itemToSend = {
+      ...newItem,
+      price: Number(newItem.price), // ✅ Ensure price is a number
+    };
+
     try {
-      await axios.post(`${API_BASE_URL}/api/menu`, newItem);
+      await axios.post(`${API_BASE_URL}/api/menu`, itemToSend);
       fetchItemsByCategory(activeCategory);
       setShowModal(false);
       setNewItem({ name: "", description: "", price: "", category: "drinks" });
